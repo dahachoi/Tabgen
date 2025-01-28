@@ -9,7 +9,7 @@ import numpy as np
 import scipy as sp
 import demucs.separate
 
-input_audio = "AudioFiles/Songs_and_Samples/keshi - ANGEL (instrumental).mp3"  # Replace with your audio file path
+input_audio = "AudioFiles/Songs_and_Samples/LANY - good guys (official video) (1).mp3"  # Replace with your audio file path
 #output_directory = "AudioFiles/Seperated_Stems/BIRDS OF A FEATHER"         # Directory to save the stems
 
 
