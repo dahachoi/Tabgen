@@ -9,11 +9,25 @@ import numpy as np
 import scipy as sp
 import demucs.separate
 
-input_audio = "AudioFiles/Songs_and_Samples/Birds of a feather.mp3"  # Replace with your audio file path
-output_directory = "AudioFiles/Seperated_Stems/BIRDS OF A FEATHER"         # Directory to save the stems
+input_audio = "AudioFiles/Songs_and_Samples/keshi - ANGEL (instrumental).mp3"  # Replace with your audio file path
+#output_directory = "AudioFiles/Seperated_Stems/BIRDS OF A FEATHER"         # Directory to save the stems
 
 
+#Seperate stems
 demucs.separate.main(["--mp3", "-n", "mdx_extra", input_audio])
+
+
+#Create file with only vocals extracted
+from pydub import AudioSegment
+
+bass = AudioSegment.from_mp3("separated/mdx_extra/Birds of a feather/bass.mp3")
+drums = AudioSegment.from_mp3("separated/mdx_extra/Birds of a feather/drums.mp3")
+instruments = AudioSegment.from_mp3("separated/mdx_extra/Birds of a feather/other.mp3")
+
+combined = bass.overlay(drums).overlay(instruments)
+
+output_path = "separated/mdx_extra/Birds of a feather/vocals_extract.mp3"
+combined.export(output_path, format="mp3")
 
 
 #Audio for Summer Tracks
