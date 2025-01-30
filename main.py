@@ -7,10 +7,10 @@ import scipy as sp
 
 # Run to activate virtual environment "source offAudio/bin/activate"
 
-audio_path = "Audio/Hear Piano Note - Middle C.mp3"
-c_minor_audio_path = "Audio/C Minor.wav"
-c_minor_andother_audio_path = "Audio/C Minor to other.wav"
-future_ski = "Audio/Future Ski.mp3"
+audio_path = "AudioFiles/Songs_and_Samples/Hear Piano Note - Middle C.mp3"
+c_minor_audio_path = "AudioFiles/Songs_and_Samples/C Minor.wav"
+c_minor_andother_audio_path = "AudioFiles/Songs_and_Samples/C Minor to other.wav"
+future_ski = "AudioFiles/Songs_and_Samples/Future Ski.mp3"
 
 ipd.Audio(audio_path)
 ipd.Audio(c_minor_audio_path)
