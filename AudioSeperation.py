@@ -14,20 +14,20 @@ input_audio = "AudioFiles/Songs_and_Samples/LANY - good guys (official video) (1
 
 
 #Seperate stems
-demucs.separate.main(["--mp3", "-n", "mdx_extra", input_audio])
+#demucs.separate.main(["--mp3", "-n", "mdx_extra", input_audio])
 
 
 #Create file with only vocals extracted
-from pydub import AudioSegment
+# from pydub import AudioSegment
 
-bass = AudioSegment.from_mp3("separated/mdx_extra/Birds of a feather/bass.mp3")
-drums = AudioSegment.from_mp3("separated/mdx_extra/Birds of a feather/drums.mp3")
-instruments = AudioSegment.from_mp3("separated/mdx_extra/Birds of a feather/other.mp3")
+# bass = AudioSegment.from_mp3("separated/mdx_extra/Birds of a feather/bass.mp3")
+# drums = AudioSegment.from_mp3("separated/mdx_extra/Birds of a feather/drums.mp3")
+# instruments = AudioSegment.from_mp3("separated/mdx_extra/Birds of a feather/other.mp3")
 
-combined = bass.overlay(drums).overlay(instruments)
+# combined = bass.overlay(drums).overlay(instruments)
 
-output_path = "separated/mdx_extra/Birds of a feather/vocals_extract.mp3"
-combined.export(output_path, format="mp3")
+# output_path = "separated/mdx_extra/Birds of a feather/vocals_extract.mp3"
+# combined.export(output_path, format="mp3")
 
 
 #Audio for Summer Tracks
