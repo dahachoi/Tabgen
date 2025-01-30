@@ -172,4 +172,5 @@ cython_debug/
 .pypirc
 =======
 **/offAudio/
+**/AudioFiles/
 >>>>>>> a5b4ac2 (Upload!)
